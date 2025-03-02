@@ -15,7 +15,6 @@
       background-color: #f4f4f4;
       font-family: Arial, sans-serif;
     }
-
     /* Calculator container styling */
     .calculator {
       background-color: #333;
@@ -23,7 +22,6 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
-
     /* Display input styling */
     #display {
       width: 100%;
@@ -37,14 +35,12 @@
       background-color: #444;
       color: #fff;
     }
-
     /* Buttons grid layout */
     .buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr); /* 4 columns */
       gap: 10px; /* Space between buttons */
     }
-
     /* Button styling */
     button {
       padding: 20px;
@@ -56,12 +52,10 @@
       cursor: pointer;
       transition: background-color 0.2s; /* Smooth hover effect */
     }
-
     /* Button hover effect */
     button:hover {
       background-color: #777;
     }
-
     /* Button active (click) effect */
     button:active {
       background-color: #999;
@@ -95,7 +89,6 @@
       <button onclick="appendNumber('.')">.</button> <!-- Decimal point -->
     </div>
   </div>
-
   <script>
     // Get the display element
     let display = document.getElementById('display');
@@ -106,7 +99,6 @@
       if (number === '.' && display.value.includes('.')) return;
       display.value += number;
     }
-
     // Function to append operators to the display
     function appendOperator(operator) {
       // Prevent adding operators if the display is empty
@@ -116,17 +108,14 @@
       if (['+', '-', '*', '/'].includes(lastChar)) return;
       display.value += operator;
     }
-
     // Function to clear the display
     function clearDisplay() {
       display.value = '';
     }
-
     // Function to delete the last character
     function deleteLast() {
       display.value = display.value.slice(0, -1);
     }
-
     // Function to calculate the result
     function calculateResult() {
       try {
